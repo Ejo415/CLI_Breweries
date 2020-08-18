@@ -1,0 +1,10 @@
+1. welcome user
+2. ask for a zip code
+3. return into terminal all breweries in said zipcode
+ask user to select brewery 
+show select information about user selection 
+
+
+- CLI Class - dealing with output onto terminal
+-API Class - deal wth all API things
+- Brewery class - deal with all breweries 
