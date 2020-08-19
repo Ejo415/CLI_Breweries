@@ -23,7 +23,7 @@ class CLI
         b = Breweries.all[input-1]
         puts b.address
         puts b.website
-        puts b.phone
+        puts b.phone.insert(3,"-").insert(7,"-")
      end
 
      def goodbye
