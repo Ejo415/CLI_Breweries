@@ -6,10 +6,10 @@ class CLI
         input = gets.strip 
         API.get_breweries(input)
         display
-        puts "Please select brewery by number."
-       
-       
+        select_brewery
+        goodbye
         end
+        
     end
 
   def display
@@ -17,10 +17,17 @@ class CLI
         puts "#{index} - #{x.name}"
     end
 
-    def display_info
+    def select_brewery
+        puts "Please select brewery by number"
+        input = gets.strip.to_i
+        b = Breweries.all[input-1]
+        puts b.address
+        puts b.website
+        puts b.phone
+     end
 
-    end
+     def goodbye
+        puts "Thank you for using Brewery Finder"
+     end
 
-
-   
 end
