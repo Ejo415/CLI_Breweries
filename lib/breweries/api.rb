@@ -17,7 +17,10 @@ class API
         Breweries.new(name, website, address, phone)
         
     end
-   # binding.pry
+   if Breweries.all == [] 
+    puts "No breweries found.".colorize(:red)
+    CLI.new.start
+   end
 end
 
 end
