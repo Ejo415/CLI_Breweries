@@ -16,11 +16,11 @@ class API
         phone = x["phone"]
         Breweries.new(name, website, address, phone)
         
-    end
+            end
    if Breweries.all == [] 
     puts "No breweries found.".colorize(:red)
     CLI.new.start
-   end
-end
+     end
+    end
 
 end

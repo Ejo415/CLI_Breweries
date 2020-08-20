@@ -5,12 +5,12 @@ class Breweries
     @@all = []
 
      def initialize(name, website, address, phone)
-    @name = name
-    @website = website
-    @address = address
-    @phone = phone 
-    @@all << self
-    end
+        @name = name
+        @website = website
+        @address = address          
+        @phone = phone 
+        @@all << self
+     end
 
     def self.all
         @@all
