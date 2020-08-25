@@ -26,13 +26,18 @@ class CLI
         puts "Please select brewery by number"
         input = gets.strip.to_i
         b = Breweries.all[input-1]
+        if input > Breweries.all.length || input < 1
+            puts "Not a valid input".colorize(:red)
+            select_brewery
+        else
         puts b.address.colorize(:magenta)
         puts b.website.colorize(:light_blue)
         puts b.phone.insert(3,"-").insert(7,"-").colorize(:red)
      end
+    end
 
      def goodbye
-        puts "Thank you for using Brewery Finder"
+        puts "Thank you for using Brewery Finder".colorize(:green)
         exit
      end
 
