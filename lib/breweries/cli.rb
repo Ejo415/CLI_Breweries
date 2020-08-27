@@ -9,6 +9,7 @@ class CLI
         self.start
     else puts  "Zipcode valid".colorize(:green)
          API.get_breweries(input)
+         binding.pry
         display
         select_brewery
         new_search
@@ -17,6 +18,7 @@ class CLI
     end
 
   def display
+    puts "We have found #{Breweries.count} Breweries in your area!"
     Breweries.all.each.with_index(1) do |x, index|
         puts "#{index} - #{x.name}".colorize(:green)
         end

@@ -20,4 +20,15 @@ class Breweries
         @@all.clear
     end
 
+
+    def self.count
+        @@all.count 
+    end
+
+    def self.address_order
+        @@all.sort_by do |entry|
+            entry.address 
+        end
+    end
+
 end
